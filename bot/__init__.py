@@ -119,6 +119,7 @@ except:
     pass
 try:
     BOT_TOKEN = getConfig('BOT_TOKEN')
+    DB_URI = getConfig('DATABASE_URL')
     parent_id = getConfig('GDRIVE_FOLDER_ID')
     DOWNLOAD_DIR = getConfig('DOWNLOAD_DIR')
     if not DOWNLOAD_DIR.endswith("/"):
@@ -210,10 +211,10 @@ except KeyError:
     UPTOBOX_TOKEN = None
 try:
     INDEX_URL = getConfig('INDEX_URL')
-    if len(INDEX_URL) == true:
-        INDEX_URL = True
+    if len(INDEX_URL) == 0:
+        INDEX_URL = None
 except KeyError:
-    INDEX_URL = False
+    INDEX_URL = None
 try:
     TORRENT_DIRECT_LIMIT = getConfig('TORRENT_DIRECT_LIMIT')
     if len(TORRENT_DIRECT_LIMIT) == 0:
