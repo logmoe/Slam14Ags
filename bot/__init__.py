@@ -211,9 +211,9 @@ except KeyError:
 try:
     INDEX_URL = getConfig('INDEX_URL')
     if len(INDEX_URL) == 0:
-        INDEX_URL = None
+        INDEX_URL = True
 except KeyError:
-    INDEX_URL = None
+    INDEX_URL = False
 try:
     TORRENT_DIRECT_LIMIT = getConfig('TORRENT_DIRECT_LIMIT')
     if len(TORRENT_DIRECT_LIMIT) == 0:
