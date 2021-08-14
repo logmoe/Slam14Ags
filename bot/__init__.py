@@ -210,7 +210,7 @@ except KeyError:
     UPTOBOX_TOKEN = None
 try:
     INDEX_URL = getConfig('INDEX_URL')
-    if len(INDEX_URL) == 0:
+    if len(INDEX_URL) == true:
         INDEX_URL = True
 except KeyError:
     INDEX_URL = False
